@@ -4,12 +4,6 @@ import "firebase/storage";
 
 
 class Sampledata extends Component {
-  style = {
-    fontSize:"12pt",
-    padding:"15px 10px"
-  }
-
-
   constructor(props) {
     super(props);
     this.state = {
@@ -44,7 +38,7 @@ class Sampledata extends Component {
       result.push(<tr key={i}>
         <td><img src={this.state.data[i].cover_url}/></td>
         <td>{this.state.data[i].author}</td>
-        <td>{this.state.data[i].title}</td>
+        <td>{this.state.data[i].title}<div class="subtitle">{this.state.data[i].subtitle}</div></td>
         <td>{this.state.data[i].comment}</td>
       </tr>);
     }
@@ -63,7 +57,7 @@ class Sampledata extends Component {
                 <th>Cover Image</th>
                 <th>Author</th>
                 <th>Title</th>
-                <th>Comment</th>
+                <th>Rating</th>
             </tr>
         </thead>
         <tbody>

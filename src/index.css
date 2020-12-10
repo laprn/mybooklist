@@ -25,6 +25,10 @@ table tr{
 }
 
 td{
-  font-size:14pt;
-  padding: 20px 0px;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+}
+
+.subtitle{
+  color: gray;
 }
