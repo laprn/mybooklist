@@ -27,7 +27,6 @@ class Sampledata extends Component {
     });
   }
 
-
   // データ表示の生成
   getTableData(){
     let result = [];
@@ -35,12 +34,17 @@ class Sampledata extends Component {
       return [<tr key="0"><th>NO DATA.</th></tr>];
     }
     for(let i in this.state.data){
-      result.push(<tr key={i}>
-        <td><img src={this.state.data[i].cover_url}/></td>
-        <td>{this.state.data[i].author}</td>
-        <td>{this.state.data[i].title}<div class="subtitle">{this.state.data[i].subtitle}</div></td>
-        <td>{this.state.data[i].comment}</td>
-      </tr>);
+      // result.push(<tr key={i}>
+      //   <td><img src={this.state.data[i].cover_url}/></td>
+      //   <td>{this.state.data[i].author}</td>
+      //   <td>{this.state.data[i].title}<div class="subtitle">{this.state.data[i].subtitle}</div></td>
+      //   <td>{this.state.data[i].comment}</td>
+      // </tr>);
+      result.push(
+      <div class="balloonoya">
+        <img src={this.state.data[i].back_cover}/>
+      <span class="balloon"><span style={{fontWeight: "bold"}}>{this.state.data[i].title}</span><div style={{fontSize:"70%"}}>{this.state.data[i].subtitle}</div><img src={this.state.data[i].cover_url}/></span>
+      </div>);
     }
     return result;
   }
@@ -51,19 +55,23 @@ class Sampledata extends Component {
       this.getFireData();
     }
     return (
-      <table>
-        <thead>
-            <tr>
-                <th>Cover Image</th>
-                <th>Author</th>
-                <th>Title</th>
-                <th>Rating</th>
-            </tr>
-        </thead>
-        <tbody>
-            {this.getTableData()}
-        </tbody>
-      </table>
+      // <table>
+      //   <thead>
+      //       <tr>
+      //           <th>Cover Image</th>
+      //           <th>Author</th>
+      //           <th>Title</th>
+      //           <th>Rating</th>
+      //       </tr>
+      //   </thead>
+      //   <tbody>
+      //       {this.getTableData()}
+      //   </tbody>
+      // </table>
+      <div>
+        {this.getTableData()}
+      </div>
+      
     )
   }
 }
