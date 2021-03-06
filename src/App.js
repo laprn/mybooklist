@@ -10,8 +10,9 @@ var firebaseConfig = {
   projectId: "booklist-3npk084",
   storageBucket: "booklist-3npk084.appspot.com",
   messagingSenderId: "297733738066",
-  appId: "1:297733738066:web:9c597a6ee1407efcab198b"
+  appId: "1:297733738066:web:f9458660cc3dbbc3ab198b"
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
