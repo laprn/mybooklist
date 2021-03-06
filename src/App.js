@@ -19,7 +19,7 @@ class App extends Component{
   render(){
     return(
     <div>
-      <h1>My book list</h1><a href="https://github.com/laprn"><i class="fab fa-github"></i></a>
+      <h1>My book list</h1>
       <Sampledata />
     </div>
     );

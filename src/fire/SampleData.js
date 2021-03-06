@@ -42,11 +42,11 @@ class Sampledata extends Component {
       // </tr>);
       result.push(
       <div class="balloonoya">
-        <img src={this.state.data[i].back_cover}/>
+        <img src={this.state.data[i].back_cover} alt=""/>
       <span class="balloon">
         <span style={{fontWeight: "bold"}}>{this.state.data[i].title}</span>
         <div style={{fontSize:"70%"}}>{this.state.data[i].subtitle}</div>
-        <img src={this.state.data[i].cover_url}/>
+        <img src={this.state.data[i].cover_url} alt=""/>
       </span>
       </div>);
     }
